@@ -1,0 +1,195 @@
+<!-- This page sets up the aesthetics and introduction for the website -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Jekyll v4.0.1" />
+
+    <!-- Setting up the title and template -->
+    <title>Cupertino Bills</title>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/starter-template/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="apple-touch-icon"
+      href="/docs/4.5/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/docs/4.5/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/docs/4.5/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg"
+      color="#563d7c"
+    />
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico" />
+    <meta
+      name="msapplication-config"
+      content="/docs/4.5/assets/img/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#563d7c" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark navbar-default.navbar-static-top"
+    >
+      <a class="navbar-brand" href="#"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <a class="navbar-brand" href="#">
+          <img
+            style="width:40px"
+            src="https://cdn.glitch.com/f2adb072-79e6-4247-8fd8-3763b0233841%2Flogo.jpeg?v=1595607919282"
+          />
+        </a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Cupertino Bills <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+            <h2 class="mb-3">
+                Welcome!
+            </h2>
+        <div class="media">
+          <span class="media-left d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                  <img src="https://cdn.glitch.com/f2adb072-79e6-4247-8fd8-3763b0233841%2Fstudent-community.png?v=1595645490025"/>
+          </span>
+          <div class="media-body">
+          <p class="ml-3">
+              As it is known, the most powerful way to prevent infringement of the
+              citizens' civil rights is to keep ourselves informed.
+              <br /><br />Currently, staying up to date on local policies is
+              tedious. It's our mission to make this information easily accessible
+              to anyone who is interested. Right now, this website caters to people
+              residing in Cupertino/CA.
+          </p>
+          </div>
+        </div>
+      </div> <!-- this is where the bills are inserted into with script.js -->
+      <table id="bills"></table>
+      <!-- this is where the popup form to insert comments is formatted -->
+      <div
+        id="insertComments"
+        class="modal fade bd-example-modal-lg"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <form>
+              <div class="form-group">
+                <input type="hidden" id="bill_id" />
+                <label for="comment_text">Enter your comments below:</label>
+                <textarea
+                  class="form-control"
+                  id="comment_text"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary" onclick="javascript:newcomment()">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--the comments popup-->
+      <div
+        id="commentsModal"
+        class="modal fade bd-example-modal-lg"
+        tabindex=""
+        role="dialog"
+        aria-labelledby="myLargeModalLabel"
+        aria-hidden="true"
+      > 
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <h4>Comments</h4>
+            <ul id="commentsDiv"></ul>
+          </div>
+        </div>
+      </div>
+
+     
+    </main>
+  </body>
+</html>
